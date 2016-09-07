@@ -16,5 +16,5 @@ deployment:
   production: # just a label; label names are completely up to you
     branch: master
     commands:
-      - aws s3 sync index.html s3://murataku.yokohama/ --delete
-      - aws s3 sync bundle.js s3://murataku.yokohama/ --delete
+      - aws s3 cp index.html s3://murataku.yokohama/
+      - aws s3 cp bundle.js s3://murataku.yokohama/
