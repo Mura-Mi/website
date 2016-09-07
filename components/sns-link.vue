@@ -19,7 +19,7 @@
             },
             fontClass: {
                 type: String,
-                rquired: false
+                required: false
             }
         }
     }
