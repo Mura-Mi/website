@@ -1,3 +1,5 @@
+const webpack = require('webpack');
+
 module.exports = {
     entry: [
         "./js/main.js"
@@ -26,5 +28,12 @@ module.exports = {
     },
     babel: {
         presets: [ 'es2015' ]
-    }
+    },
+    plugins: [
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                warnings: false
+            }
+        })
+    ]
 };
