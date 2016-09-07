@@ -1,5 +1,4 @@
 .idea/
-dist/
 
 # Created by https://www.gitignore.io/api/node
 
@@ -45,3 +44,4 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
+bundle.js
