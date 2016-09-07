@@ -1,6 +1,6 @@
 <template>
     <li>
-        <a href="{{ link }}">
+        <a href="{{ link }}" target="_blank">
             <i v-if="fontClass" class="fa fa-{{fontClass}}" aria-hidden="true"></i>
             {{ name }}
         </a>
