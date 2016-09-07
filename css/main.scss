@@ -1,6 +1,12 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+
+$font-family-sans-serif: 'Noto Sans JP', sans-serif;
+
+$brand-primary: mediumblue;
+$body-bg: lightsteelblue;
+
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import "~bootstrap-sass/assets/stylesheets/_bootstrap";
 
 $fa-font-path: '~font-awesome/fonts';
 @import "~font-awesome/scss/font-awesome";
-
