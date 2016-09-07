@@ -8,6 +8,8 @@ module.exports = {
     },
     module: {
         loaders: [
+            { test: /\.vue$/, loaders: [ "vue" ] },
+            { test: /\.js$/, loaders: [ "babel" ], exclude: /node_modules/ },
             { test: /\.css$/, loaders: [ "style", "css" ] },
             { test: /\.sass$/, loaders: [ "style", "css", "sass" ]},
             { test: /\.scss$/, loaders: [ "style", "css", "sass" ]},
@@ -21,5 +23,8 @@ module.exports = {
             { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?mimetype=application/font-woff' },
             { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?mimetype=application/font-woff' }
         ]
+    },
+    babel: {
+        presets: [ 'es2015' ]
     }
 };
