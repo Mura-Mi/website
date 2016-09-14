@@ -21,3 +21,4 @@ deployment:
     commands:
       - aws s3 cp index.html s3://murataku.yokohama/
       - aws s3 cp bundle.js s3://murataku.yokohama/
+      - aws s3 cp bundle.css s3://murataku.yokohama/

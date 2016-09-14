@@ -44,4 +44,7 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
+
+# Dist Files
 bundle.js
+bundle.css
