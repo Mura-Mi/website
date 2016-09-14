@@ -1,5 +1,7 @@
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const autoprefixer = require('autoprefixer');
+const postcssClean = require('postcss-clean');
 
 module.exports = [{
     entry: [
@@ -42,7 +44,7 @@ module.exports = [{
     },
     module: {
         loaders: [
-            { test: /\.scss$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader') },
+            { test: /\.scss$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader!sass-loader') },
             { test: /\.svg$/, loader: 'url-loader?mimetype=image/svg+xml' },
             { test: /\.woff$/, loader: 'url-loader?mimetype=application/font-woff' },
             { test: /\.woff2$/, loader: 'url-loader?mimetype=application/font-woff' },
@@ -56,5 +58,8 @@ module.exports = [{
     },
     plugins: [
         new ExtractTextPlugin("bundle.css")
-    ]
+    ],
+    postcss: function() {
+            return [autoprefixer, postcssClean];
+    }
 }];
