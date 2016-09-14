@@ -1,10 +1,10 @@
 const Vue = require('vue');
 
-import SnsLink from '../components/sns-link.vue';
+import ulLink from '../components/ul-link.vue';
 
 new Vue({
     el: "#main",
     components: {
-        SnsLink
+        ulLink
     }
 });
