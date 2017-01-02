@@ -21,6 +21,7 @@ dependencies:
   cache_directories:
     - ~/.yarn
     - ~/.cache/yarn
+    - ~/.cache/pip
 
 test:
   override:
